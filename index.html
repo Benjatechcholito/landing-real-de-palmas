@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real de Palmas | Casas y Lotes Residenciales</title>
+    <!-- Tailwind CSS (Diseño y Colores) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome (Iconos) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Imagen de fondo del Hero */
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80') center/cover no-repeat;
+        }
+        
+        /* Efecto de cristal para la tarjeta flotante */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Animación para el popup de Social Proof */
+        .toast-enter { transform: translateY(150%); opacity: 0; }
+        .toast-active { transform: translateY(0); opacity: 1; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Navegación -->
+    <nav class="absolute top-0 w-full z-50 px-6 py-6 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">REAL DE PALMAS</a>
+            
+            <!-- Enlaces de escritorio -->
+            <div class="hidden md:flex space-x-8 text-white/90 text-sm font-medium items-center">
+                <a href="#" class="hover:text-white transition-colors">Inicio</a>
+                <a href="#lotes" class="hover:text-white transition-colors">Lotes</a>
+                <a href="#casas" class="hover:text-white transition-colors">Casas</a>
+                <a href="#acerca" class="hover:text-white transition-colors">Acerca de</a>
+                <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+                <!-- CTA Principal en Navbar -->
+                <a href="#agendar" class="bg-white text-slate-900 px-6 py-2.5 rounded-full font-semibold hover:bg-slate-100 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fab fa-whatsapp text-green-500 mr-2 text-lg"></i>Agendar Llamada
+                </a>
+            </div>
+            <!-- Botón Menú Móvil -->
+            <button class="md:hidden text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
+            
+            <!-- TÍTULO A COLOR BLANCO -->
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 mt-10">
+                Casas y lotes residenciales <br/>
+                <span class="text-white font-light">en venta en Villahermosa</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl font-light">
+                Real de Palmas integra espacios habitacionales y recreativos en un espacio privilegiado, dándole a sus residentes comodidad, seguridad y tranquilidad.
+            </p>
+
+            <a href="#agendar" class="bg-green-500 text-white text-lg px-8 py-4 rounded-full font-semibold hover:bg-green-600 transition-all transform hover:scale-105 shadow-xl shadow-green-900/20 mb-16 flex items-center">
+                <i class="fab fa-whatsapp text-2xl mr-3"></i> Agendar por WhatsApp
+            </a>
+
+            <!-- 1. UBICACIÓN, METRAJE Y PRECIO -->
+            <div class="w-full max-w-4xl glass-panel rounded-2xl p-6 md:p-8 shadow-2xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-200 mt-auto mb-10 translate-y-1/4">
+                
+                <div class="flex flex-col items-center md:items-start text-center md:text-left px-4">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4"><i class="fas fa-map-marker-alt text-xl"></i></div>
+                    <!-- TEXTOS EN NEGRO -->
+                    <p class="text-sm text-black font-medium uppercase tracking-wider mb-1">1. Ubicación</p>
+                    <h3 class="text-xl font-bold text-slate-900">Villahermosa, Tab.</h3>
+                    <p class="text-sm text-black mt-1">Fraccionamiento privado</p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left px-4 pt-4 md:pt-0">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-4"><i class="fas fa-ruler-combined text-xl"></i></div>
+                    <!-- TEXTOS EN NEGRO -->
+                    <p class="text-sm text-black font-medium uppercase tracking-wider mb-1">2. Metraje</p>
+                    <h3 class="text-xl font-bold text-slate-900">Desde 160 m²</h3>
+                    <p class="text-sm text-black mt-1">Amplios espacios</p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left px-4 pt-4 md:pt-0">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4"><i class="fas fa-tag text-xl"></i></div>
+                    <!-- TEXTOS EN NEGRO -->
+                    <p class="text-sm text-black font-medium uppercase tracking-wider mb-1">3. Precio</p>
+                    <h3 class="text-xl font-bold text-slate-900">Preventa Exclusiva</h3>
+                    <p class="text-sm text-black mt-1">Excelentes planes de pago</p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="h-40 md:h-24 bg-slate-50"></div>
+
+    <!-- Sección: Por qué elegirnos y Amenidades -->
+    <section id="acerca" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">¿Por qué elegir <br/><span class="text-blue-600">Real de Palmas?</span></h2>
+                <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                    La seguridad de su familia es primordial, por ello contamos con <strong>acceso único con control de vigilancia</strong>. 
+                </p>
+                <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                    La convivencia familiar es muy importante para nosotros, por ello contamos con amplias áreas verdes dentro de todo el proyecto.
+                </p>
+                
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="flex-shrink-0"><i class="fas fa-shield-alt text-3xl text-blue-600"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Tranquilidad Absoluta</h4>
+                        <p class="text-sm text-slate-500">Amenidades diseñadas para su comodidad y seguridad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Casas en Real de Palmas" class="rounded-2xl shadow-2xl z-10 relative">
+                <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-blue-100 rounded-2xl -z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios (Estilo Google) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-12">Lo que dicen nuestras familias</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">M</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 text-sm">Miguel A. Rodríguez</h4>
+                                <p class="text-xs text-slate-500 flex items-center"><i class="fas fa-certificate text-blue-500 mr-1"></i> Local Guide</p>
+                            </div>
+                        </div>
+                        <i class="fab fa-google text-slate-300 text-xl"></i>
+                    </div>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="text-slate-400 text-xs ml-1">Hace 2 semanas</span>
+                    </div>
+                    <p class="text-slate-600 text-sm">"Excelente fraccionamiento, la seguridad es de primera. Compramos un lote el mes pasado y el proceso con los asesores en Plaza Mallorca fue súper transparente."</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">L</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 text-sm">Laura Méndez</h4>
+                                <p class="text-xs text-slate-500">1 opinión</p>
+                            </div>
+                        </div>
+                        <i class="fab fa-google text-slate-300 text-xl"></i>
+                    </div>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="text-slate-400 text-xs ml-1">Hace 1 mes</span>
+                    </div>
+                    <p class="text-slate-600 text-sm">"Las áreas verdes están hermosas. Visitamos las instalaciones y nos encantó la tranquilidad que se respira. Ya agendamos para apartar nuestra casa."</p>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-rose-600 text-white rounded-full flex items-center justify-center font-bold">C</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 text-sm">Carlos V.</h4>
+                                <p class="text-xs text-slate-500 flex items-center"><i class="fas fa-certificate text-blue-500 mr-1"></i> Local Guide</p>
+                            </div>
+                        </div>
+                        <i class="fab fa-google text-slate-300 text-xl"></i>
+                    </div>
+                    <div class="text-yellow-400 text-sm mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span class="text-slate-400 text-xs ml-1">Hace 2 meses</span>
+                    </div>
+                    <p class="text-slate-600 text-sm">"Muy buen precio para la ubicación y el metraje que ofrecen en Villahermosa. La atención por WhatsApp fue muy rápida."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVO: Botón CTA directo a WhatsApp (reemplaza al formulario) -->
+    <section id="agendar" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">¿Listo para conocer su próximo hogar?</h2>
+            <p class="text-lg text-slate-600 mb-10">Hablemos ahora mismo. Envíenos un mensaje y un asesor le brindará atención personalizada para agendar su visita.</p>
+            
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl max-w-xl mx-auto text-center border border-slate-100">
+                
+                <!-- Botón WhatsApp -->
+                <a href="https://wa.me/529930000000?text=Hola,%20me%20interesa%20agendar%20una%20llamada%20sobre%20Real%20de%20Palmas" target="_blank" class="inline-flex items-center justify-center w-full bg-[#25D366] text-white py-5 rounded-2xl font-bold text-xl hover:bg-[#1ebd5a] transition-all transform hover:-translate-y-1 shadow-lg shadow-green-500/30">
+                    <i class="fab fa-whatsapp text-3xl mr-3"></i>
+                    Agendar por WhatsApp
+                </a>
+                
+                <p class="text-sm text-slate-500 mt-6 flex items-center justify-center">
+                    <span class="relative flex h-3 w-3 mr-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    Asesores en línea. Respuesta rápida garantizada.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-slate-800 pb-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-6 tracking-wider">REAL DE PALMAS</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">Espacios habitacionales y recreativos en un entorno privilegiado.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6 text-slate-200">Puntos de Venta</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i><strong>Plaza Mallorca</strong> | Planta Alta Tabasco 2000</li>
+                    <li><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i><strong>Oficina Fraccionamiento</strong></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-6 text-slate-200">Números de Contacto</h4>
+                <ul class="space-y-3 text-slate-400 text-sm">
+                    <li>Plaza Mallorca: <a href="tel:9933177455" class="text-white hover:text-blue-400">(993)-317-7455</a></li>
+                    <li>Oficina Fraccionamiento: <a href="tel:9936887683" class="text-white hover:text-blue-400">(993)-688-7683</a></li>
+                    <li>WhatsApp: <a href="https://wa.me/529931281796" target="_blank" class="text-green-400 hover:text-green-300"><i class="fab fa-whatsapp mr-1"></i> (993)-128-1796</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificación flotante (Social Proof Popup) -->
+    <div id="social-proof-toast" class="fixed bottom-6 left-6 bg-white border border-slate-200 rounded-lg shadow-2xl p-4 flex items-center space-x-4 z-50 transition-all duration-500 ease-out toast-enter max-w-sm">
+        <div class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+            <i class="fab fa-whatsapp text-lg"></i>
+        </div>
+        <div>
+            <p class="text-sm text-slate-800"><strong id="toast-name">Familia González</strong> acaba de contactar por WhatsApp.</p>
+            <p class="text-xs text-slate-500 mt-1" id="toast-time">Hace unos momentos</p>
+        </div>
+        <button onclick="closeToast()" class="text-slate-400 hover:text-slate-600 absolute top-2 right-2">
+            <i class="fas fa-times text-xs"></i>
+        </button>
+    </div>
+
+    <!-- Script para la Notificación Flotante -->
+    <script>
+        const names = ["Familia González", "Roberto M.", "Ana C.", "Familia Valdés", "Luis H.", "Diana S."];
+        const toast = document.getElementById('social-proof-toast');
+        const toastName = document.getElementById('toast-name');
+        
+        function showToast() {
+            // Selecciona un nombre al azar
+            toastName.innerText = names[Math.floor(Math.random() * names.length)];
+            // Muestra el popup
+            toast.classList.remove('toast-enter');
+            toast.classList.add('toast-active');
+            
+            // Oculta el popup después de 6 segundos
+            setTimeout(() => {
+                closeToast();
+            }, 6000);
+        }
+
+        function closeToast() {
+            toast.classList.remove('toast-active');
+            toast.classList.add('toast-enter');
+        }
+
+        // Mostrar por primera vez a los 4 segundos
+        setTimeout(() => {
+            showToast();
+            // Repetir cada 18 segundos
+            setInterval(showToast, 18000);
+        }, 4000);
+    </script>
+</body>
+</html>
